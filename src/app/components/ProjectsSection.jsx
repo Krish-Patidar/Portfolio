@@ -7,57 +7,63 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "TechFusion",
+    description: "Smart Employee Management System",
+    technologies: " Java · Artificial Intelligence (AI) · HTML-CSS-JS · Java AWT · JDBC · Python · MySQL · Full-Stack Development",
+    image: "/images/projects/first.png",
+    tag: ["All", "AI & Blockchain"],
+    gitUrl: "https://github.com/Krish-Patidar/TechFusion.git",
+    previewUrl: "https://www.linkedin.com/posts/krish-patidar01_artificialintelligence-machinelearning-aiinnovation-activity-7300846910687383552-LCEx?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEWjHeQBjxp0a8ByFE8z9KYQoye8LOAfn84",
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
-    image: "/images/projects/2.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "BallotBlock",
+    description: "Decentralized Voting System",
+    technologies: "Smart Contracts · Blockchain · Ethereum · React.js · Web3 · Full-Stack Development",
+    image: "/images/projects/second.png",
+    tag: ["All", "AI & Blockchain"],
+    gitUrl: "https://github.com/Krish-Patidar/BallotBlock.git",
+    previewUrl: "https://www.linkedin.com/posts/krish-patidar01_blockchain-ethereum-decentralizedvoting-activity-7271081353725517824-LXN3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEWjHeQBjxp0a8ByFE8z9KYQoye8LOAfn84",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
-    image: "/images/projects/3.png",
+    title: "NeighborhoodFinds",
+    description: "E-Commerce",
+    technologies: "HTML-CSS · PHP · JavaScript · phpMyAdmin · Full-Stack Development",
+    image: "/images/projects/third.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Krish-Patidar/NeighborhoodFinds.git",
+    previewUrl: "https://www.linkedin.com/posts/krish-patidar01_project-webdevelopment-projectcompletion-activity-7195321314008559616-atGg?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEWjHeQBjxp0a8ByFE8z9KYQoye8LOAfn84",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
+    title: "SeniorMitra",
+    description: "Connecting Seniors Socially",
+    technologies: "HTML · CSS · JavaScript · Front-end Development",
+    image: "/images/projects/fourth.png",
+    tag: ["All", "Web"],
+    gitUrl: "https://github.com/Krish-Patidar/SenoirMitra.git",
+    previewUrl: "https://www.linkedin.com/posts/krish-patidar01_bytesquad-hackathon-teamwork-activity-7241337310041018368-ltZ3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEWjHeQBjxp0a8ByFE8z9KYQoye8LOAfn84",
   },
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
+    title: "IconicThreads",
+    description: "E-commerce Fashionable Website",
+    technologies: "HTML · CSS · JavaScript · Front-end Development",
+    image: "/images/projects/fifth.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Krish-Patidar/IconicThreads.git",
+    previewUrl: "https://www.linkedin.com/posts/krish-patidar01_hackathon-36hourcoding-teamwork-activity-7274677004208087041-PbUR?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEWjHeQBjxp0a8ByFE8z9KYQoye8LOAfn84",
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
-    image: "/images/projects/6.png",
+    title: "Planify",
+    description: "Event Management System",
+    technologies: "Node.js · React.js · MongoDB · MERN Stack · Full-Stack Development",
+    image: "/images/projects/sixth.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Krish-Patidar/Planify.git",
+    previewUrl: "https://www.linkedin.com/posts/krish-patidar01_hackathon-mernstack-techxlr8-activity-7290585007562104833-1D1_?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEWjHeQBjxp0a8ByFE8z9KYQoye8LOAfn84",
   },
 ];
 
@@ -81,6 +87,7 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects">
+      <br /><br /><br />
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
@@ -97,8 +104,8 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="AI & Blockchain"
+          isSelected={tag === "AI & Blockchain"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
@@ -114,6 +121,7 @@ const ProjectsSection = () => {
               key={project.id}
               title={project.title}
               description={project.description}
+              technologies={project.technologies}
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}

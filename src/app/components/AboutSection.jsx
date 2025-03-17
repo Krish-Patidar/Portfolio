@@ -9,13 +9,15 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
+        <li>Java & C++</li>
+        <li>Python</li>
+        <li>React.js</li>
         <li>Node.js</li>
-        <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
+        <li>MySQL & MongoDB</li>
         <li>JavaScript</li>
-        <li>React</li>
+        <li>MERN</li>
       </ul>
+      
     ),
   },
   {
@@ -23,18 +25,25 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        <li>College: Prestige Institute of Engineering Management & Research (PIEMR) <br />
+           Course: Bachelor of Technology(B.Tech) - Computer Science & Engineering(CSE)<br />Grade: 8.52 CGPA</li>
+        <li>School: M.G.M Higher Secondary School <br />
+            Class: 12th | Subject: PCM (Physics Chemistry Maths) | Grade: 83.2%</li>
+            <li>School: M.G.M Higher Secondary School <br />
+            Class: 10th | Grade: 83.8%</li>
       </ul>
     ),
   },
   {
     title: "Certifications",
-    id: "certifications",
+    id: "achievement",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>Student Placement Cordinator (SPC) | PIEMR (On-Campus)</li>
+        <li>Technical Head | GeeksforGeeks (GFG) | PIEMR (On-Campus)</li>
+        <li>Campus Ambassador | IIT Delhi | BITS, Pilani | Remote</li>
+        <li>UI/UX Designer (Figma) | FFDG Indore | 1-Month | On-Site</li>
+        <li>ILH'24 | Finalist | National Level Hackathon</li>
       </ul>
     ),
   },
@@ -52,17 +61,13 @@ const AboutSection = () => {
 
   return (
     <section className="text-white" id="about">
+        <br />  <br />
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} />
+        <Image src="/images/about.png" width={500} height={500} />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+          I am a Software Engineer & AI & Software Developer with a passion for building scalable and intelligent applications. I have experience working with React.js, MERN, MySQL, Java, C++, JavaScript, and Python. I am a quick learner and always eager to explore new technologies. I thrive in collaborative environments and enjoy solving complex problems to create innovative and efficient solutions.
           </p>
           <div className="flex flex-row justify-start mt-8">
             <TabButton
@@ -80,11 +85,11 @@ const AboutSection = () => {
               Education{" "}
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
+              selectTab={() => handleTabChange("achievement")}
+              active={tab === "achievement"}
             >
               {" "}
-              Certifications{" "}
+              Achievement{" "}
             </TabButton>
           </div>
           <div className="mt-8">
